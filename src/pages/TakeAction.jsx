@@ -1,20 +1,20 @@
-import { Mail, Phone, Globe, ExternalLink, BookOpen } from 'lucide-react'
+import { Mail, Globe, ExternalLink, BookOpen } from 'lucide-react'
 
 const organizations = [
-  { name: 'Americans for Responsible Technology', url: 'www.americansforresponsibletech.org' },
-  { name: 'The Baby Safe Project', url: 'www.babysafeproject.org' },
-  { name: 'Environmental Health Trust', url: 'www.ehtrust.org' },
-  { name: 'Pennsylvanians for Safe Technology', url: 'www.pasafetech.com' },
-  { name: 'Smart Meter Harm', url: 'www.smartmeterharm.org' },
-  { name: 'Stop Smart Meters', url: 'www.stopsmartmeters.org' },
-  { name: 'Who-Knew?', url: 'www.Who-Knew.info' },
+  { name: 'Americans for Responsible Technology', url: 'https://www.americansforresponsibletech.org' },
+  { name: 'The Baby Safe Project', url: 'https://www.babysafeproject.org' },
+  { name: 'Environmental Health Trust', url: 'https://www.ehtrust.org' },
+  { name: 'Pennsylvanians for Safe Technology', url: 'https://www.pasafetech.com' },
+  { name: 'Smart Meter Harm', url: 'https://www.smartmeterharm.org' },
+  { name: 'Stop Smart Meters', url: 'https://www.stopsmartmeters.org' },
+  { name: 'Who-Knew?', url: 'https://www.Who-Knew.info' },
 ]
 
 const technicalResources = [
-  { name: 'Electromagnetic Radiation Safety', url: 'www.saferemr.org' },
-  { name: 'International Commission for Electromagnetic Safety', url: 'www.icems.eu' },
-  { name: 'National Call for Safe Technology', url: 'thenationalcall.org' },
-  { name: 'Physicians for Safe Technology', url: 'www.mdsafetech.org' },
+  { name: 'Electromagnetic Radiation Safety', url: 'https://www.saferemr.org' },
+  { name: 'International Commission for Electromagnetic Safety', url: 'https://www.icems.eu' },
+  { name: 'National Call for Safe Technology', url: 'https://thenationalcall.org' },
+  { name: 'Physicians for Safe Technology', url: 'https://www.mdsafetech.org' },
 ]
 
 export default function TakeAction() {
@@ -29,10 +29,13 @@ export default function TakeAction() {
           <p className="text-navy-300 text-lg max-w-2xl mx-auto mb-10">
             Contact your senator and ask them to support SB 600 &mdash; because no one should be forced to risk their health, privacy, or property.
           </p>
-          <div className="inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-navy-900 rounded-xl font-bold text-lg shadow-lg">
+          <a
+            href="mailto:abashir@pasen.gov?subject=Support%20SB%20600%20%E2%80%93%20Meter%20Choice&body=I%20am%20writing%20to%20ask%20for%20your%20support%20of%20Senate%20Bill%20600%20%E2%80%93%20Meter%20Choice%20for%20Pennsylvanians."
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-navy-900 rounded-xl font-bold text-lg shadow-lg hover:bg-gold-400 transition-colors"
+          >
             <Mail className="w-6 h-6" />
             Support SB 600 &mdash; Meter Choice
-          </div>
+          </a>
         </div>
       </section>
 
@@ -43,7 +46,10 @@ export default function TakeAction() {
             <h2 className="text-3xl font-serif font-bold text-center mb-10">Contact &amp; Connect</h2>
 
             <div className="grid md:grid-cols-2 gap-6 mb-10">
-              <div className="bg-white border border-navy-100 rounded-xl p-6 shadow-sm">
+              <a
+                href="mailto:abashir@pasen.gov?subject=Regarding%20SB%20600%20%E2%80%93%20Meter%20Choice"
+                className="bg-white border border-navy-100 rounded-xl p-6 shadow-sm hover:border-gold-300 hover:shadow-md transition-all block"
+              >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-navy-100 rounded-full flex items-center justify-center">
                     <Mail className="w-5 h-5 text-navy-700" />
@@ -54,9 +60,12 @@ export default function TakeAction() {
                   </div>
                 </div>
                 <p className="text-gold-700 font-medium">abashir@pasen.gov</p>
-              </div>
+              </a>
 
-              <div className="bg-white border border-navy-100 rounded-xl p-6 shadow-sm">
+              <a
+                href="mailto:dbeishl@pasen.gov?subject=Regarding%20SB%20600%20%E2%80%93%20Meter%20Choice"
+                className="bg-white border border-navy-100 rounded-xl p-6 shadow-sm hover:border-gold-300 hover:shadow-md transition-all block"
+              >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-navy-100 rounded-full flex items-center justify-center">
                     <Mail className="w-5 h-5 text-navy-700" />
@@ -67,16 +76,21 @@ export default function TakeAction() {
                   </div>
                 </div>
                 <p className="text-gold-700 font-medium">dbeishl@pasen.gov</p>
-              </div>
+              </a>
             </div>
 
-            <div className="bg-navy-50 border border-navy-100 rounded-xl p-6 text-center">
+            <a
+              href="https://www.senatormastriano.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-navy-50 border border-navy-100 rounded-xl p-6 text-center block hover:border-gold-300 hover:shadow-md transition-all"
+            >
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Globe className="w-5 h-5 text-navy-600" />
                 <span className="font-semibold text-navy-900">Connect with Sen. Mastriano</span>
               </div>
               <p className="text-gold-700 font-medium">www.senatormastriano.com</p>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -104,16 +118,19 @@ export default function TakeAction() {
                 </h3>
                 <div className="space-y-3">
                   {organizations.map(org => (
-                    <div
+                    <a
                       key={org.name}
-                      className="bg-white border border-navy-100 rounded-lg p-4 flex items-center justify-between gap-3"
+                      href={org.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white border border-navy-100 rounded-lg p-4 flex items-center justify-between gap-3 hover:border-gold-300 hover:shadow-md transition-all block"
                     >
                       <div>
                         <div className="font-medium text-navy-900 text-sm">{org.name}</div>
-                        <div className="text-xs text-gold-700 mt-0.5">{org.url}</div>
+                        <div className="text-xs text-gold-700 mt-0.5">{org.url.replace('https://', '')}</div>
                       </div>
                       <ExternalLink className="w-4 h-4 text-navy-400 shrink-0" />
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -126,16 +143,19 @@ export default function TakeAction() {
                 </h3>
                 <div className="space-y-3">
                   {technicalResources.map(res => (
-                    <div
+                    <a
                       key={res.name}
-                      className="bg-white border border-navy-100 rounded-lg p-4 flex items-center justify-between gap-3"
+                      href={res.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white border border-navy-100 rounded-lg p-4 flex items-center justify-between gap-3 hover:border-gold-300 hover:shadow-md transition-all block"
                     >
                       <div>
                         <div className="font-medium text-navy-900 text-sm">{res.name}</div>
-                        <div className="text-xs text-gold-700 mt-0.5">{res.url}</div>
+                        <div className="text-xs text-gold-700 mt-0.5">{res.url.replace('https://', '')}</div>
                       </div>
                       <ExternalLink className="w-4 h-4 text-navy-400 shrink-0" />
-                    </div>
+                    </a>
                   ))}
                 </div>
 
@@ -161,10 +181,13 @@ export default function TakeAction() {
           <p className="text-navy-300 text-lg leading-relaxed mb-8">
             The "consumer rights" legislation Pennsylvania needs. No one should be forced to risk their health, privacy, or property.
           </p>
-          <div className="inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-navy-900 rounded-xl font-bold text-lg">
+          <a
+            href="mailto:abashir@pasen.gov?subject=Support%20SB%20600%20%E2%80%93%20Meter%20Choice&body=I%20am%20writing%20to%20ask%20for%20your%20support%20of%20Senate%20Bill%20600%20%E2%80%93%20Meter%20Choice%20for%20Pennsylvanians."
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-navy-900 rounded-xl font-bold text-lg hover:bg-gold-400 transition-colors"
+          >
             <Mail className="w-6 h-6" />
             Contact Your Senator Today
-          </div>
+          </a>
         </div>
       </section>
     </div>

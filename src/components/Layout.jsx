@@ -114,20 +114,20 @@ export default function Layout() {
               <p className="text-sm mb-1">
                 <span className="text-gold-400">Aaron Bashir</span>, Legislative Director
               </p>
-              <p className="text-sm mb-3">abashir@pasen.gov</p>
+              <a href="mailto:abashir@pasen.gov" className="text-sm hover:text-gold-400 transition-colors block mb-3">abashir@pasen.gov</a>
               <p className="text-sm mb-1">
                 <span className="text-gold-400">Donald Beishl</span>, Chief of Staff
               </p>
-              <p className="text-sm">dbeishl@pasen.gov</p>
+              <a href="mailto:dbeishl@pasen.gov" className="text-sm hover:text-gold-400 transition-colors block">dbeishl@pasen.gov</a>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-3">Connect</h4>
               <p className="text-sm">
                 Office of Senator Mastriano
               </p>
-              <p className="text-sm text-gold-400 mt-1">
+              <a href="https://www.senatormastriano.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gold-400 hover:text-gold-300 transition-colors block mt-1">
                 www.senatormastriano.com
-              </p>
+              </a>
             </div>
           </div>
           <div className="border-t border-navy-700 mt-8 pt-8 text-center text-xs text-navy-500">
