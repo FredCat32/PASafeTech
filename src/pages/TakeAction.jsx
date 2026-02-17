@@ -1,4 +1,11 @@
-import { Mail, Globe, ExternalLink, BookOpen } from 'lucide-react'
+import { Mail, Globe, ExternalLink, BookOpen, Phone, FileText, Search } from 'lucide-react'
+
+const committeeMembers = [
+  { name: 'Senator Patrick Stefano', role: 'Chair, Senate Consumer Protection', phone: '(717) 787-7175' },
+  { name: 'Senator Lisa Boscola', role: 'Minority Chair', phone: '(717) 787-4236' },
+  { name: 'Senator Frank Farry', role: 'Majority Member, Vice Chair', phone: '(717) 787-5072' },
+  { name: 'Senator Kim Ward', role: 'Ex-Officio', phone: '(717) 787-6063' },
+]
 
 const organizations = [
   { name: 'Americans for Responsible Technology', url: 'https://www.americansforresponsibletech.org' },
@@ -24,73 +31,117 @@ export default function TakeAction() {
       <section className="bg-gradient-to-br from-navy-900 via-navy-800 to-navy-950 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-serif font-bold mb-4">
-            Take <span className="text-gold-400">Action</span> Now
+            Take <span className="text-gold-400">Action</span>
           </h1>
-          <p className="text-navy-300 text-lg max-w-2xl mx-auto mb-10">
-            Contact your senator and ask them to support SB 600 &mdash; because no one should be forced to risk their health, privacy, or property.
+          <p className="text-navy-300 text-lg max-w-2xl mx-auto">
+            Please contact the Senate Consumer Affairs Committee and tell them to support Meter Choice. Use the talking points from this website.
           </p>
-          <a
-            href="mailto:abashir@pasen.gov?subject=Support%20SB%20600%20%E2%80%93%20Meter%20Choice&body=I%20am%20writing%20to%20ask%20for%20your%20support%20of%20Senate%20Bill%20600%20%E2%80%93%20Meter%20Choice%20for%20Pennsylvanians."
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-navy-900 rounded-xl font-bold text-lg shadow-lg hover:bg-gold-400 transition-colors"
-          >
-            <Mail className="w-6 h-6" />
-            Support SB 600 &mdash; Meter Choice
-          </a>
         </div>
       </section>
 
-      {/* Contact */}
+      {/* Senate Consumer Affairs Committee */}
       <section className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-serif font-bold text-center mb-10">Contact &amp; Connect</h2>
+            <div className="flex items-center gap-3 mb-2">
+              <Phone className="w-7 h-7 text-gold-600" />
+              <h2 className="text-3xl font-serif font-bold">Senate Consumer Affairs Committee</h2>
+            </div>
+            <p className="text-navy-500 mb-8">
+              Call these members and ask them to support Meter Choice
+            </p>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-10">
-              <a
-                href="mailto:abashir@pasen.gov?subject=Regarding%20SB%20600%20%E2%80%93%20Meter%20Choice"
-                className="bg-white border border-navy-100 rounded-xl p-6 shadow-sm hover:border-gold-300 hover:shadow-md transition-all block"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-navy-100 rounded-full flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-navy-700" />
+            <div className="grid sm:grid-cols-2 gap-4 mb-12">
+              {committeeMembers.map((member, i) => (
+                <a
+                  key={member.name}
+                  href={`tel:${member.phone.replace(/[^0-9]/g, '')}`}
+                  className="bg-white border border-navy-100 rounded-xl p-5 shadow-sm hover:border-gold-300 hover:shadow-md transition-all block"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <div className="font-bold text-navy-900">{member.name}</div>
+                      <div className="text-sm text-navy-500 mt-0.5">{member.role}</div>
+                    </div>
+                    <div className="w-8 h-8 bg-gold-50 border border-gold-200 rounded-full flex items-center justify-center shrink-0">
+                      <span className="text-gold-700 font-bold text-sm">{i + 1}</span>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-bold text-navy-900">Aaron Bashir</div>
-                    <div className="text-sm text-navy-500">Legislative Director</div>
+                  <div className="flex items-center gap-2 mt-3 text-gold-700 font-medium">
+                    <Phone className="w-4 h-4" />
+                    {member.phone}
                   </div>
-                </div>
-                <p className="text-gold-700 font-medium">abashir@pasen.gov</p>
-              </a>
+                </a>
+              ))}
+            </div>
 
+            {/* Contact Your Legislator */}
+            <div className="bg-navy-50 border border-navy-100 rounded-xl p-6 lg:p-8 mb-12">
+              <h3 className="text-xl font-serif font-bold text-navy-900 mb-3">Contact Your State Legislators</h3>
+              <p className="text-navy-700 leading-relaxed mb-6">
+                Please contact your PA State Senator and PA House Representative and ask them to support and co-sponsor <strong>SB 600</strong> and <strong>HB 1112</strong>, respectively.
+              </p>
               <a
-                href="mailto:dbeishl@pasen.gov?subject=Regarding%20SB%20600%20%E2%80%93%20Meter%20Choice"
-                className="bg-white border border-navy-100 rounded-xl p-6 shadow-sm hover:border-gold-300 hover:shadow-md transition-all block"
+                href="https://www.palegis.us/find-my-legislator"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-navy-900 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-navy-100 rounded-full flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-navy-700" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-navy-900">Donald Beishl</div>
-                    <div className="text-sm text-navy-500">Chief of Staff</div>
-                  </div>
-                </div>
-                <p className="text-gold-700 font-medium">dbeishl@pasen.gov</p>
+                <Search className="w-5 h-5" />
+                Find My Legislator
               </a>
             </div>
 
-            <a
-              href="https://www.senatormastriano.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-navy-50 border border-navy-100 rounded-xl p-6 text-center block hover:border-gold-300 hover:shadow-md transition-all"
-            >
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Globe className="w-5 h-5 text-navy-600" />
-                <span className="font-semibold text-navy-900">Connect with Sen. Mastriano</span>
-              </div>
-              <p className="text-gold-700 font-medium">www.senatormastriano.com</p>
-            </a>
+            {/* Bills */}
+            <div className="flex items-center gap-3 mb-2">
+              <FileText className="w-7 h-7 text-gold-600" />
+              <h2 className="text-3xl font-serif font-bold">Meter Choice Bills</h2>
+            </div>
+            <p className="text-navy-500 mb-8">
+              Senate and House legislation for meter choice in Pennsylvania
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-6">
+              <a
+                href="https://www.palegis.us/legislation/bills/2025/sb600"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white border border-navy-100 rounded-xl p-6 shadow-sm hover:border-gold-300 hover:shadow-md transition-all block"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-navy-900 rounded-lg flex items-center justify-center">
+                    <FileText className="w-5 h-5 text-gold-400" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-navy-900 text-lg">Senate Bill 600</div>
+                    <div className="text-sm text-navy-500">PA State Senate</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1 text-gold-700 text-sm font-medium">
+                  Read the bill <ExternalLink className="w-3.5 h-3.5" />
+                </div>
+              </a>
+
+              <a
+                href="https://www.palegis.us/legislation/bills/2025/hb1112"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white border border-navy-100 rounded-xl p-6 shadow-sm hover:border-gold-300 hover:shadow-md transition-all block"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-navy-900 rounded-lg flex items-center justify-center">
+                    <FileText className="w-5 h-5 text-gold-400" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-navy-900 text-lg">House Bill 1112</div>
+                    <div className="text-sm text-navy-500">PA House of Representatives</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1 text-gold-700 text-sm font-medium">
+                  Read the bill <ExternalLink className="w-3.5 h-3.5" />
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -182,11 +233,13 @@ export default function TakeAction() {
             The "consumer rights" legislation Pennsylvania needs. No one should be forced to risk their health, privacy, or property.
           </p>
           <a
-            href="mailto:abashir@pasen.gov?subject=Support%20SB%20600%20%E2%80%93%20Meter%20Choice&body=I%20am%20writing%20to%20ask%20for%20your%20support%20of%20Senate%20Bill%20600%20%E2%80%93%20Meter%20Choice%20for%20Pennsylvanians."
+            href="https://www.palegis.us/find-my-legislator"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-navy-900 rounded-xl font-bold text-lg hover:bg-gold-400 transition-colors"
           >
-            <Mail className="w-6 h-6" />
-            Contact Your Senator Today
+            <Search className="w-6 h-6" />
+            Find &amp; Contact Your Legislator
           </a>
         </div>
       </section>
