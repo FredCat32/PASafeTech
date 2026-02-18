@@ -10,6 +10,7 @@ const committeeMembers = [
 const organizations = [
   { name: 'Americans for Responsible Technology', url: 'https://www.americansforresponsibletech.org' },
   { name: 'The Baby Safe Project', url: 'https://www.babysafeproject.org' },
+  { name: 'EMR Syndrome Alliance', url: 'https://www.EMRSyndrome.org' },
   { name: 'Environmental Health Trust', url: 'https://www.ehtrust.org' },
   { name: 'Pennsylvanians for Safe Technology', url: 'https://www.pasafetech.com' },
   { name: 'Smart Meter Harm', url: 'https://www.smartmeterharm.org' },

@@ -13,7 +13,7 @@ const claimsAndFacts = [
   },
   {
     claim: 'Most of the evidence from these groups is either anecdotal, not peer-reviewed, or lacks rigorous methodology.',
-    fact: 'For the past few years, many constituents have contacted the office with compelling documentation and medical evidence indicating that smart meters pose a serious risk to their health. These reports are supported by medical records and statements from licensed healthcare professionals.',
+    fact: 'People have, for several years, been providing compelling documentation and medical evidence indicating that smart meters pose a serious risk to their health. These reports are supported by medical records and statements from licensed healthcare professionals.',
     detail: 'There is extensive documentation of harm from the type of electromagnetic radiation used by smart meters from thousands of US military studies. The more recent studies in the voluminous record of scientific evidence in EHT et al v. FCC (2021) confirms clear and convincing evidence of harms. This radiation is classified as a Group 2B possible carcinogen with more recent results calling for reclassification as a probable (Class 2A) or known (Class 1) carcinogen.',
   },
 ]
